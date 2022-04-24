@@ -2,12 +2,12 @@ package com.cis.hospital.model;
 
 public class UserLogin {
 
-    private int userID;
+    private Integer userID;
     private String userName;
     private String password;
     private String firstName;
     private String lastName;
-    private int age;
+    private Integer age;
     private String mobileNumber;
     private String address;
     private String city;
