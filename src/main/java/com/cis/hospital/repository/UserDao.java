@@ -36,17 +36,17 @@ public class UserDao {
         UserLogin user = new UserLogin();
         connection = DBConnection.createDBConnection();
         Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("Select * from users where username = '"+userName+"'");
+        ResultSet rs = stmt.executeQuery("Select * from users where userName = '"+userName+"'");
         while(rs.next()){
             user.setUserID(rs.getInt(1));
             user.setUserName(rs.getString(2));
-            user.setFirstName(rs.getString(3));
-            user.setLastName(rs.getString(4));
-            user.setAge(rs.getInt(5));
-            user.setMobileNumber(rs.getString(6));
-            user.setAddress(rs.getString(7));
-            user.setCity(rs.getString(8));
-            user.setPassword(rs.getString(9));
+            user.setPassword(rs.getString(3));
+            user.setFirstName(rs.getString(4));
+            user.setLastName(rs.getString(5));
+            user.setAge(rs.getInt(6));
+            user.setMobileNumber(rs.getString(7));
+            user.setAddress(rs.getString(8));
+            user.setCity(rs.getString(9));
         }
         return user;
     }
