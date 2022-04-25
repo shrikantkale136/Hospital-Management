@@ -53,11 +53,12 @@ public class AddUserServlet extends HttpServlet {
         String status = userDAO.insertUser(user);
         if(status == "SUCCESS") {
             result = "User Created Successfully. Please Log in";
+            System.out.println("SUCCESS : " +result);
         }
         else {
             result = "User Creation Failed. Please Sign up again!";
+            System.out.println("FAIL : " +result);
         }
-
         req.setAttribute("result", result);
         req.getRequestDispatcher("views/authentication/login.jsp").forward(req, resp);
     }

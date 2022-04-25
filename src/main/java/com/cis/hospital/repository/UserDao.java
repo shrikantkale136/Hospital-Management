@@ -87,10 +87,12 @@ public class UserDao {
         String sql = "UPDATE USERS SET FirstName=\'"+user.getFirstName()+"\', LastName=\'"+user.getLastName()+"\', Age=\'"+user.getAge()+"\', MobileNumber=\'"+user.getMobileNumber()+"\', Address=\'"+user.getAddress()+"\', City=\'"+user.getCity()+"\' where UserName=\'"+user.getUserName()+"\'";
         int count = stmt.executeUpdate(sql);
         if(count==1) {
-            status = "success";
+            status = "SUCCESS";
+            System.out.println("SUCCESS : Record updated successfully for user " + user.getUserName());
         }
         else {
-            status = "fail";
+            status = "FAIL";
+            System.out.println("FAIL : Record unable to update for user " + user.getUserName());
         }
         return status;
     }

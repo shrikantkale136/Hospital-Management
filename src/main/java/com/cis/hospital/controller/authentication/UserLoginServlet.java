@@ -44,18 +44,21 @@ public class UserLoginServlet extends HttpServlet {
         if(user.getUserName() != null) {
             if(user.getPassword().equals(req.getParameter("password"))) {
                 result = "User Authenticated";
+                System.out.println("SUCCESS : "+result);
                 req.setAttribute("userID", user.getUserID());
                 req.setAttribute("username", req.getParameter("username"));
                 req.getRequestDispatcher("views/dashboard/user-home.jsp").forward(req, resp);
             }
             else {
                 result = "Username or Password is incorrect";
+                System.out.println("FAIL : "+result);
                 req.setAttribute("result", result);
                 req.getRequestDispatcher("views/authentication/login.jsp").forward(req, resp);
             }
         }
         else {
             result = "User Does not exist";
+            System.out.println("FAIL : "+result);
             req.setAttribute("result", result);
             req.getRequestDispatcher("views/authentication/login.jsp").forward(req, resp);
         }
