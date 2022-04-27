@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cis</groupId>
-    <artifactId>Hospital</artifactId>
+    <artifactId>Hospital-Management</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Hospital</name>
     <packaging>war</packaging>
@@ -24,6 +24,11 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+    </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

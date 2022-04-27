@@ -84,7 +84,7 @@ public class UserDao {
         String status;
         connection = DBConnection.createDBConnection();
         Statement stmt = connection.createStatement();
-        String sql = "UPDATE USERS SET FirstName=\'"+user.getFirstName()+"\', LastName=\'"+user.getLastName()+"\', Age=\'"+user.getAge()+"\', MobileNumber=\'"+user.getMobileNumber()+"\', Address=\'"+user.getAddress()+"\', City=\'"+user.getCity()+"\' where UserName=\'"+user.getUserName()+"\'";
+        String sql = "UPDATE USERS SET FirstName='" +user.getFirstName()+ "', LastName='" +user.getLastName()+ "', Age='" +user.getAge()+ "', MobileNumber='" +user.getMobileNumber()+ "', Address='" +user.getAddress()+ "', City='" +user.getCity()+ "' where UserName='" +user.getUserName()+ "'";
         int count = stmt.executeUpdate(sql);
         if(count==1) {
             status = "SUCCESS";
